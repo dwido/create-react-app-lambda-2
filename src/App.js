@@ -40,6 +40,11 @@ class App extends Component {
           <p>
             Hello School of FrontendXX
           </p>
+          <div className="XMixGrid">
+            123
+            456
+            789
+          </div>
           <LambdaDemo />
         </header>
       </div>
