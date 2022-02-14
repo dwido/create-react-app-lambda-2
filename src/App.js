@@ -9,6 +9,7 @@ class Grid extends Component {
   data = []
 
   initializeGrid() {
+    //comment
     for (let r = 0; r < 3; r++) {
       this.data.push([])
       for (let c = 0; c < 3; c++) {
