@@ -21,7 +21,7 @@ class Grid extends Component {
     const items = []
     for (let r = 0; r < 3; r++) {
       for (let c = 0; c < 3; c++) {
-        items.push(<div className="Grid-cell"></div>)
+        items.push(<div className="Grid-cell">Hey</div>)
       }
     }
 
