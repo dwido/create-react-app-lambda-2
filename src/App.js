@@ -38,7 +38,7 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
-            Play X Mix Drix
+            Play X Mix Drix with me
           </p>
           <Grid />
         </header>
