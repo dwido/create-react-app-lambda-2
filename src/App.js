@@ -1,33 +1,71 @@
 import React, { Component } from "react"
+import {Cell} from "./cell/cell.component.js"
 import logo from "./logo.svg"
 import "./App.css"
 
 class Grid extends Component {
-  empty = {}
-  black = {}
-  white = {}
-  data = []
-
-  initializeGrid() {
-    for (let r = 0; r < 3; r++) {
-      this.data.push([])
-      for (let c = 0; c < 3; c++) {
-        this.data[r][c] = this.empty
-      }
+  constructor() {
+    super();
+    this.initializeGrid()
+    this.state = {
+      data: this.initializeGrid(),
+      xTurn: true,
+      inProgress: false
     }
   }
 
-  render() {
-    const items = []
+  initializeGrid() {
+    const data = []
     for (let r = 0; r < 3; r++) {
+      data.push([])
       for (let c = 0; c < 3; c++) {
-        items.push(<div className="Grid-cell"></div>)
+        data[r][c] = null
       }
     }
 
+    return data;
+  }
+
+  switchTurn() {
+    this.setState({
+      xTurn: !this.state.xTurn
+    })
+  }
+
+  render() {
+    const handleCellClick = (r, c) => {
+      const dataClone = this.state.data.slice()
+      if (dataClone[r][c]) {
+        alert('meeeeeeeeee this move is not possible')
+        return
+      }
+      dataClone[r][c] = this.state.xTurn ? 'X' : 'O';
+      this.setState({data: dataClone})
+      this.switchTurn()
+    }
+
+    const items = []
+    for (let r = 0; r < 3; r++) {
+      for (let c = 0; c < 3; c++) {
+        items.push(<Cell key={r + ':' + c} onClick={handleCellClick.bind(null, r, c)} currentValue={this.state.data[r][c]}/>)
+      }
+    }
+
+    const gridClasses = `grid ${this.state.inProgress ? 'battle' : 'tracklin'}`
+
     return (
-      <div className="Grid">{items}</div>
+      <div className={gridClasses}>
+        <button onClick={this.startGame.bind(this)} className="start-button">Start</button>
+        <div className="turn">Turn {this.state.xTurn? 'X' : 'O'}</div>
+        <div className="cells">{items}</div>
+      </div>
     )
+  }
+
+  startGame() {
+    this.setState({
+      inProgress: true
+    })
   }
 }
 
