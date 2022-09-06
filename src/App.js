@@ -36,6 +36,9 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
+          <p>
+            Marketer's site example
+          </p>
           <img src={logo} className="App-logo" alt="logo" />
           <p>
             Play X Mix Drix with me
