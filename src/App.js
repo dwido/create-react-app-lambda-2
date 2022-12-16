@@ -43,6 +43,7 @@ class App extends Component {
           <p>
             Play X Mix Drix with me
           </p>
+          <button>Play now!!!</button>
           <Grid />
         </header>
       </div>
