@@ -44,6 +44,7 @@ class App extends Component {
             Play X Mix Drix with me
           </p>
           <button>Play now!!!</button>
+          <button>Play now with Alaa!!</button>
           <Grid />
         </header>
       </div>
