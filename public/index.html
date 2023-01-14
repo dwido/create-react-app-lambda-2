@@ -23,6 +23,9 @@
     <script>
     window.addEventListener("message", (event) => {
       console.log(event)
+      if (event.origin === "https://www.facebook.com") {
+        throw('xxxxxxxxxxxxx')
+      }
     }, false);
     </script>
     <script id="CookieDeclaration" src="https://consent.cookiebot.com/c1edc27e-ae5f-4b4b-997b-08c81dbf66f1/cd.js" type="text/javascript" async></script>
