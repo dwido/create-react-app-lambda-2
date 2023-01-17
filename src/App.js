@@ -36,7 +36,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <a onclick="console.log('heyyyyyyyyyy')">Next</a>
+          <a href="https://www.google.com" onclick="console.log('heyyyyyyyyyy')">Next</a>
           <p>
             Marketer's site example
           </p>
