@@ -44,7 +44,7 @@ class App extends Component {
           <p>
             Play X Mix Drix with me
           </p>
-          <button onClick={fireAddConversion}>Play now!!!</button>
+          <button>Play now!!!</button>
           <button>Play now with Alaa!!</button>
           <Grid />
         </header>
