@@ -34,7 +34,7 @@ class Grid extends Component {
 class App extends Component {
   render() {
     const fireAddConversion = () => {
-      obApi('track', 'Checkout Me');
+      window.obApi('track', 'Checkout Me');
     }
     
       return (
