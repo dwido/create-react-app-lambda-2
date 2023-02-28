@@ -32,11 +32,7 @@ class Grid extends Component {
 }
 
 class App extends Component {
-  render() {
-    const fireAddConversion = () => {
-      window.obApi('track', 'Checkout Me');
-    }
-    
+  render() {    
       return (
       <div className="App">
         <header className="App-header">
