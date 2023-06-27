@@ -44,9 +44,9 @@ class App extends Component {
           <p>
             Play X Mix Drix with me
           </p>
-          <button>Play now!!!</button>
-          <button>Play now with Alaa!!</button>
+          <button id="play-now">Play now!!!</button>
           <Grid />
+          <button id="play-later">Play later!!!</button>
         </header>
       </div>
     )
