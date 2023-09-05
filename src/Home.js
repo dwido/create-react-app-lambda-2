@@ -1,12 +1,10 @@
 import React from "react";
 import "./Home.css"; // Import your CSS file
-import { useNavigate } from 'react-router-dom';
 
 export const Home = () => {
-  const navigate = useNavigate();
 
   const redirectToAbout = () => {
-    navigate("/about"); // Redirect to the About page
+    window.location.href = "/about";
   };
 
   return (
